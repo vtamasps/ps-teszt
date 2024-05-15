@@ -35,6 +35,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Check if the review was approved
         if: github.event.review.state == 'APPROVED'
         run: echo "a pull request jova hagyva"
