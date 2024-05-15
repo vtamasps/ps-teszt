@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Check if the review was approved
         if: github.event.review.state == 'APPROVED'
-        run: echo "The pull request was approved."
+        run: echo "a pull request jova hagyva"
       #- name: Get build artifacts
       #  uses: actions/download-artifact@v3
       #  with:
@@ -53,11 +53,11 @@ jobs:
       #    dist-folder: ./dist
           # bucket-region: eu-central-1
       - name: Upload to AWS S3
-        run: echo "itt lesz az aws feltoltes"
-        #uses: jakejarvis/s3-sync-action@master
-        #with:
-        #  args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'  s3://your-bucket-name
-        #env:
-        #  AWS_S3_BUCKET: ps-teszt-hosting
-          #AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          #AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #run: echo "itt lesz az aws feltoltes"
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete --exclude '.git*/*'
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
