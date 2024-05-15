@@ -1,1 +1,7 @@
 ez itt a teszt txt
+
+1. github repot csinalni
+2. fajlokat letrehozni
+3. aws s3 bucket
+4. workflow
+5. collaborator hozzaadasa (https://www.youtube.com/watch?v=LhSYiHKlSI4)
