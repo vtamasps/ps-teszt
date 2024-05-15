@@ -6,3 +6,4 @@ ez itt a teszt txt
 4. workflow
 5. collaborator hozzaadasa + branch protection (https://www.youtube.com/watch?v=rYwwz1b2Nss)
 
+asd
