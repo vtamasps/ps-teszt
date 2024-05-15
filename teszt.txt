@@ -4,4 +4,4 @@ ez itt a teszt txt
 2. fajlokat letrehozni
 3. aws s3 bucket
 4. workflow
-5. collaborator hozzaadasa (https://www.youtube.com/watch?v=LhSYiHKlSI4)
+5. collaborator hozzaadasa es branch protection (https://www.youtube.com/watch?v=rYwwz1b2Nss)

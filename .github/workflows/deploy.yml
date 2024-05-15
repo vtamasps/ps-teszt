@@ -6,22 +6,24 @@ on:
   pull_request_review: 
     types: [submitted]
 jobs:
+  approved:
+      if: github.event.review.state == 'APPROVED'
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "This PR was approved"
+
     #lintelés
     #minden job használhat cachelést
     #saját workflowkat lehet használni
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
       - name: Test code
         run: echo "ez itt a teszteles"
   build:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
       - name: Build website
         run: echo "ez itt a buildelés"
       #- name: Upload artifacts
@@ -33,10 +35,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
       - name: Check if the review was approved
-        if: github.event.review.state == 'approved'
+        if: github.event.review.state == 'APPROVED'
         run: echo "The pull request was approved."
       #- name: Get build artifacts
       #  uses: actions/download-artifact@v3
