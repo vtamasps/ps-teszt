@@ -5,3 +5,5 @@ ez itt a teszt txt
 3. aws s3 bucket
 4. workflow
 5. collaborator hozzaadasa (https://www.youtube.com/watch?v=LhSYiHKlSI4)
+
+6. ezt vartomi999-el modositottam
