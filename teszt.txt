@@ -7,3 +7,9 @@ ez itt a teszt txt
 5. collaborator hozzaadasa + branch protection (https://www.youtube.com/watch?v=rYwwz1b2Nss)
 
 teszt masterre nevezes utan
+
+  git branch -m master main
+  git fetch origin
+  git branch -u origin/main main
+  git remote set-head origin -a
+  
